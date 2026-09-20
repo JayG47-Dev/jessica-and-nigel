@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP — Jessica &amp; Nigel</title>
+  <meta name="description" content="RSVP for Jessica &amp; Nigel's wedding in Naxxar, Malta on 13th May 2027, by 31st January 2027.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">J <span class="amp">&amp;</span> N</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="dress-code.html">What to Wear</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="rsvp.html" class="btn btn--solid">RSVP</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <span class="eyebrow">Join Us</span>
+    <h1>RSVP</h1>
+    <p>We can&rsquo;t wait to celebrate in Malta with you! Please let us know if you can make it by <strong>31st January 2027</strong>.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rsvp-wrap">
+
+        <form
+          id="rsvp-form"
+          name="rsvp"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="rsvp" />
+          <p class="hidden-field">
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <label class="field-label" for="full_name">Your Full Name <span class="req">*</span></label>
+            <input type="text" id="full_name" name="full_name" required autocomplete="name">
+          </div>
+
+          <div class="form-row">
+            <label class="field-label" for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <p class="form-note">So we can send you any updates before the big day.</p>
+          </div>
+
+          <div class="form-row">
+            <label class="field-label">Who Do You Want to RSVP For? <span class="req">*</span></label>
+            <div class="pill-group">
+              <input type="radio" id="rsvp_just_me" name="rsvp_for" value="Just Myself" checked>
+              <label for="rsvp_just_me">Just Myself</label>
+
+              <input type="radio" id="rsvp_plus" name="rsvp_for" value="Myself & Partner / Guest">
+              <label for="rsvp_plus">Myself &amp; Partner / Guest</label>
+            </div>
+
+            <div class="conditional-field" id="guest-name-field">
+              <label class="field-label" for="guest_name">Guest 1 Full Name <span class="req">*</span></label>
+              <input type="text" id="guest_name" name="guest_name">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="field-label">Will You Be Joining Us in Malta? <span class="req">*</span></label>
+            <div class="pill-group">
+              <input type="radio" id="attending_yes" name="attending" value="Yes" checked>
+              <label for="attending_yes">Yes</label>
+
+              <input type="radio" id="attending_no" name="attending" value="No">
+              <label for="attending_no">No</label>
+            </div>
+          </div>
+
+          <div id="attending-extras">
+            <div class="form-row">
+              <label class="field-label" for="dietary">Dietary Requirements or Severe Allergies?</label>
+              <textarea id="dietary" name="dietary" rows="3"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label class="field-label" for="song_request">Song Request or Note for Jessica &amp; Nigel?</label>
+              <textarea id="song_request" name="song_request" rows="3"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;">Submit</button>
+        </form>
+
+        <div id="rsvp-success">
+          <h3>Thank You!</h3>
+          <p>Your RSVP has been received. We can&rsquo;t wait to celebrate with you in Malta!</p>
+        </div>
+
+        <div id="rsvp-error">
+          <p>Something went wrong sending your RSVP. Please try again, or email us directly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="logo">J <span class="amp">&amp;</span> N</div>
+    <p>Jessica &amp; Nigel &middot; 13th May 2027 &middot; Naxxar, Malta</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accommodation.html">Accommodation</a></li>
+      <li><a href="dress-code.html">What to Wear</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+    <p>&copy; <span id="year"></span> Made with love for our wedding weekend.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
