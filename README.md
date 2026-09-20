@@ -1,15 +1,10 @@
 # Jessica &amp; Nigel — Wedding Website
 
-A static wedding website for Jessica &amp; Nigel's destination wedding in Naxxar, Malta on **13th May 2027**. Built with plain HTML, CSS and JavaScript — no build step, ready to deploy straight to Netlify.
+A static, single-page wedding website for Jessica &amp; Nigel's destination wedding in Naxxar, Malta on **13th May 2027**. Built with plain HTML, CSS and JavaScript — no build step, ready to deploy straight to Netlify.
 
 ## Pages
 
-- `index.html` — Home: hero, at-a-glance, day timeline, RSVP call-to-action
-- `rsvp.html` — RSVP form (submits via Netlify Forms)
-- `accommodation.html` — Where to stay
-- `dress-code.html` — What to wear
-- `travel.html` — Getting to Malta
-- `faq.html` — Frequently asked questions
+- `index.html` — the whole site, as sections on one scrolling page: Home, At a Glance, The Day, Stay &amp; Travel, What to Wear, FAQ, and RSVP. The nav bar links jump to each section (`#the-day`, `#stay`, `#wear`, `#faq`, `#rsvp`) with a highlighted active link as you scroll.
 - `thank-you.html` — RSVP confirmation / no-JS fallback
 
 ## Deploying to Netlify
@@ -23,7 +18,7 @@ You can also just drag-and-drop the whole project folder onto [app.netlify.com/d
 
 ### RSVP form (Netlify Forms)
 
-The RSVP form on `rsvp.html` uses [Netlify Forms](https://docs.netlify.com/forms/setup/) — no backend or extra service needed. Once deployed:
+The RSVP form in the `#rsvp` section of `index.html` uses [Netlify Forms](https://docs.netlify.com/forms/setup/) — no backend or extra service needed. Once deployed:
 
 1. Go to your site in the Netlify dashboard → **Forms**. A form named `rsvp` should appear automatically after your first deploy (Netlify scans the HTML for `data-netlify="true"` forms at deploy time).
 2. Go to **Forms → Settings and usage → Form notifications** and add an email notification so you get an email every time someone RSVPs.
@@ -34,9 +29,8 @@ The RSVP form on `rsvp.html` uses [Netlify Forms](https://docs.netlify.com/forms
 
 A few spots are marked with a dashed placeholder note directly on the page — search the HTML for `placeholder-note` to find them all. Currently that's:
 
-- **Accommodation** — recommended hotel(s)/booking link or group rate, and a note on any group transport/shuttle
-- **Dress code** — confirm the exact dress code wording/colour palette if you want one
-- **Travel** — optional flight/airline suggestions
+- **Stay &amp; Travel** — recommended hotel(s)/booking link or group rate
+- **What to Wear** — confirm the exact dress code wording/colour palette if you want one
 - **FAQ** — children policy, gift registry details, and a contact email/phone number
 - A contact/couple email address to use across the site
 

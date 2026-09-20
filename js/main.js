@@ -15,6 +15,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Scroll-spy nav highlighting (one-page site) ---------- */
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  var sections = Array.prototype.map.call(navLinks, function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  }).filter(Boolean);
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    var setActive = function (id) {
+      navLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    };
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { setActive(entry.target.id); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
   /* ---------- Countdown to the wedding day ---------- */
   var countdownEl = document.getElementById('countdown-days');
   if (countdownEl) {
