@@ -7,13 +7,13 @@
 :root {
   --ink: #4a3538;
   --ink-soft: #7d6467;
-  --sea: #a8677e;
-  --sea-deep: #6b3448;
+  --sea: #b0698f;
+  --sea-deep: #7a3c60;
   --sand: #faf1e2;
   --sand-alt: #f2ddd8;
   --gold: #c9a227;
   --gold-soft: #e3c467;
-  --terracotta: #a8506a;
+  --terracotta: #b8507f;
   --line: rgba(74, 53, 56, 0.14);
   --white: #fffaf4;
 
@@ -132,8 +132,8 @@ p { margin: 0 0 1em; }
 .btn:hover { background: var(--gold); color: var(--white); }
 
 .btn--solid {
-  background: var(--sea-deep);
-  border-color: var(--sea-deep);
+  background: var(--sea);
+  border-color: var(--sea);
   color: var(--white);
 }
 .btn--solid:hover { background: var(--gold); border-color: var(--gold); }
@@ -246,7 +246,7 @@ p { margin: 0 0 1em; }
   justify-content: center;
   text-align: center;
   background-image:
-    linear-gradient(180deg, rgba(107, 52, 72, 0.80) 0%, rgba(86, 38, 58, 0.85) 55%, rgba(56, 22, 36, 0.92) 100%),
+    linear-gradient(180deg, rgba(122, 60, 96, 0.68) 0%, rgba(101, 46, 79, 0.74) 55%, rgba(72, 30, 58, 0.82) 100%),
     url('../images/venue-hero-mobile.webp');
   background-size: cover;
   background-position: center;
@@ -260,7 +260,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 800px) {
   .hero {
     background-image:
-      linear-gradient(180deg, rgba(107, 52, 72, 0.80) 0%, rgba(86, 38, 58, 0.85) 55%, rgba(56, 22, 36, 0.92) 100%),
+      linear-gradient(180deg, rgba(122, 60, 96, 0.68) 0%, rgba(101, 46, 79, 0.74) 55%, rgba(72, 30, 58, 0.82) 100%),
       url('../images/venue-hero-desktop.webp');
   }
 }
