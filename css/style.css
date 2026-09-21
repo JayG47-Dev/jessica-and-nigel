@@ -218,7 +218,7 @@ p { margin: 0 0 1em; }
   border-color: var(--gold);
 }
 .nav-links .btn { padding: 10px 22px; }
-.nav-links .btn--solid:hover { background: var(--white); border-color: var(--gold); outline-color: var(--gold); color: var(--sea-deep); }
+.nav-links .btn--solid { background: var(--sea); }
 
 .nav-toggle {
   display: none;
