@@ -421,7 +421,7 @@ p { margin: 0 0 1em; }
   width: 46px;
   height: 46px;
   margin: 0 auto 18px;
-  color: var(--gold);
+  color: var(--gold-soft);
 }
 
 .glance-card h3 { margin-bottom: 0.4em; }
@@ -478,7 +478,7 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--sea-deep);
+  color: var(--gold-soft);
   transform: rotate(45deg);
 }
 .timeline-marker svg { transform: rotate(-45deg); }
@@ -499,6 +499,15 @@ p { margin: 0 0 1em; }
   display: block;
 }
 .timeline-venue { color: var(--ink-soft); font-size: 0.96rem; }
+.map-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sea);
+  border-bottom: 1px solid var(--gold);
+}
 
 /* ---------- Info page content blocks ---------- */
 .content-block {
@@ -533,6 +542,7 @@ p { margin: 0 0 1em; }
   align-items: center;
   gap: 10px;
 }
+.two-col h3 svg { color: var(--gold-soft); }
 
 ul.styled-list {
   list-style: none;
