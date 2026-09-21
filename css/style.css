@@ -218,6 +218,8 @@ p { margin: 0 0 1em; }
   border-color: var(--gold);
 }
 .nav-links .btn { padding: 10px 22px; }
+.nav-links .btn--solid { background: #3c1e39; }
+.nav-links .btn--solid:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
 
 .nav-toggle {
   display: none;
