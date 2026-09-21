@@ -6,6 +6,19 @@ A static, single-page wedding website for Jessica &amp; Nigel's destination wedd
 
 - `index.html` — the whole site, as sections on one scrolling page: Home, At a Glance, The Day, Stay &amp; Travel, What to Wear, FAQ, and RSVP. The nav bar links jump to each section (`#the-day`, `#stay`, `#wear`, `#faq`, `#rsvp`) with a highlighted active link as you scroll.
 - `thank-you.html` — RSVP confirmation / no-JS fallback
+- `images/venue-hero.jpg` — the hero background photo (see **Hero photo** below)
+
+## Colour palette
+
+Champagne, blush pink and gold. Every colour lives as a CSS variable at the top of `css/style.css` (`:root { ... }`), so the whole site re-themes from one place if you want to adjust a shade later.
+
+## Hero photo
+
+Drop a landscape photo of the venue at:
+
+    images/venue-hero.jpg
+
+and it'll automatically appear full-bleed behind the hero text on a dark rose overlay (for text legibility). See `images/README.md` for sizing tips. Until that file exists, the hero just shows the plain gradient — nothing breaks.
 
 ## Deploying to Netlify
 
