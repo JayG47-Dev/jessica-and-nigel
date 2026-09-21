@@ -321,14 +321,6 @@ p { margin: 0 0 1em; }
 
 .hero-content { position: relative; z-index: 2; max-width: 760px; }
 
-.hero-crest {
-  width: 104px;
-  height: auto;
-  margin: 0 auto 20px;
-  color: var(--gold-soft);
-  opacity: 0.95;
-}
-
 .hero .eyebrow { color: var(--gold-soft); }
 
 .hero h1 {
@@ -717,7 +709,7 @@ ul.styled-list li::before {
 .form-note {
   font-size: 0.85rem;
   color: var(--ink-soft);
-  margin-top: -6px;
+  margin-top: 4px;
 }
 
 #rsvp-success, #rsvp-error {
