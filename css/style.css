@@ -684,15 +684,15 @@ ul.styled-list li::before {
   max-width: 640px;
   margin: 0 auto;
   background: var(--white);
-  padding: 48px;
+  padding: 40px;
   border: 1px solid var(--gold-line);
   box-shadow: 0 24px 60px rgba(10, 4, 10, 0.35);
 }
 @media (max-width: 600px) {
-  .rsvp-wrap { padding: 32px 22px; }
+  .rsvp-wrap { padding: 28px 22px; }
 }
 
-.form-row { margin-bottom: 26px; }
+.form-row { margin-bottom: 20px; }
 
 .form-row label.field-label {
   display: block;
@@ -700,7 +700,7 @@ ul.styled-list li::before {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sea);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .form-row label.field-label .req { color: var(--terracotta); }
 
@@ -720,7 +720,7 @@ ul.styled-list li::before {
   outline: none;
   border-color: var(--gold);
 }
-.form-row textarea { resize: vertical; min-height: 90px; }
+.form-row textarea { resize: vertical; min-height: 48px; }
 
 .pill-group {
   display: flex;
