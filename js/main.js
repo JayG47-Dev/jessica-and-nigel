@@ -67,6 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Timeline info toggles ---------- */
+  document.querySelectorAll('.info-toggle').forEach(function (item) {
+    var button = item.querySelector('.info-toggle-btn');
+    var panel = item.querySelector('.info-panel');
+    button.addEventListener('click', function () {
+      var isOpen = item.classList.contains('is-open');
+      if (isOpen) {
+        item.classList.remove('is-open');
+        panel.style.maxHeight = null;
+      } else {
+        item.classList.add('is-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
   /* ---------- RSVP form logic ---------- */
   var rsvpForm = document.getElementById('rsvp-form');
   if (rsvpForm) {
