@@ -782,6 +782,7 @@ ul.styled-list li::before {
   display: none;
   text-align: center;
   padding: 20px 0;
+  color: var(--ink);
 }
 #rsvp-success h3 { color: var(--sea-deep); }
 
