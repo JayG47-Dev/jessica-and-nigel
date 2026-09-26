@@ -705,8 +705,7 @@ ul.styled-list li::before {
 .form-row label.field-label .req { color: var(--terracotta); }
 
 .form-row input[type="text"],
-.form-row input[type="email"],
-.form-row textarea {
+.form-row input[type="email"] {
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--line);
@@ -716,11 +715,10 @@ ul.styled-list li::before {
   font-size: 1rem;
   color: var(--ink);
 }
-.form-row input:focus, .form-row textarea:focus {
+.form-row input:focus {
   outline: none;
   border-color: var(--gold);
 }
-.form-row textarea { resize: vertical; min-height: 38px; padding-top: 6px; }
 
 .pill-group {
   display: flex;
