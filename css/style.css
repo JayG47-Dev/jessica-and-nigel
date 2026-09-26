@@ -720,7 +720,7 @@ ul.styled-list li::before {
   outline: none;
   border-color: var(--gold);
 }
-.form-row textarea { resize: vertical; min-height: 48px; }
+.form-row textarea { resize: vertical; min-height: 38px; padding-top: 6px; }
 
 .pill-group {
   display: flex;
