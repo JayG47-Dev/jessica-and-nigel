@@ -512,6 +512,15 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- Timeline info toggle ---------- */
+.info-image {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--gold-line);
+  margin-top: 12px;
+}
 .info-toggle { margin-top: 10px; }
 .info-toggle-btn {
   display: inline-flex;
@@ -554,14 +563,6 @@ p { margin: 0 0 1em; }
   padding-top: 14px;
   color: var(--ink-soft);
   font-size: 0.94rem;
-}
-.info-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 1px solid var(--gold-line);
-  margin-bottom: 16px;
 }
 .info-panel-inner h4 {
   font-family: var(--font-imperial);
