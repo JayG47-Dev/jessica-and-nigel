@@ -2,7 +2,7 @@
    Jessica & Nigel — Malta Wedding
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=MonteCarlo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Roboto+Serif:wght@300;400;500;600&family=MonteCarlo&display=swap');
 
 :root {
   --ink: #2a1e28;
@@ -20,7 +20,7 @@
 
   --font-display: "Cormorant Garamond", serif;
   --font-imperial: "Cinzel", serif;
-  --font-body: "Jost", sans-serif;
+  --font-body: "Roboto Serif", serif;
   --font-heading: "MonteCarlo", cursive;
 
   --max-width: 1120px;
