@@ -555,6 +555,14 @@ p { margin: 0 0 1em; }
   color: var(--ink-soft);
   font-size: 0.94rem;
 }
+.info-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--gold-line);
+  margin-bottom: 16px;
+}
 .info-panel-inner h4 {
   font-family: var(--font-imperial);
   font-size: 0.86rem;
