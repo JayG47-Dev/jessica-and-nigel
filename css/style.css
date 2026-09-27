@@ -2,25 +2,26 @@
    Jessica & Nigel — Malta Wedding
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Roboto+Serif:wght@300;400;500;600&family=MonteCarlo&display=swap');
 
 :root {
-  --ink: #2a1e28;
-  --ink-soft: #6c5762;
-  --sea: #6a3a63;
-  --sea-deep: #2b1329;
-  --sand: #f6efe0;
-  --sand-alt: #ebe0da;
+  --ink: #362b1e;
+  --ink-soft: #7c6b52;
+  --sea: #8c6a1f;
+  --sea-deep: #34281a;
+  --sand: #faf6ec;
+  --sand-alt: #f2ead9;
   --gold: #a3822e;
   --gold-soft: #cbab6b;
-  --terracotta: #7c3b53;
-  --line: rgba(42, 30, 40, 0.18);
+  --terracotta: #b8862f;
+  --line: rgba(54, 43, 30, 0.18);
   --gold-line: rgba(163, 130, 46, 0.4);
   --white: #fffdf8;
 
   --font-display: "Cormorant Garamond", serif;
   --font-imperial: "Cinzel", serif;
-  --font-body: "Jost", sans-serif;
+  --font-body: "Roboto Serif", serif;
+  --font-heading: "MonteCarlo", cursive;
 
   --max-width: 1120px;
   --radius: 1px;
@@ -52,20 +53,20 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.6rem, 6vw, 4.5rem);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
+  font-weight: 400;
   letter-spacing: 0.015em;
 }
 
 h2, h3, h4 {
-  font-family: var(--font-imperial);
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
-h2 { font-size: clamp(1.5rem, 3.2vw, 2.05rem); }
-h3 { font-size: 1.05rem; letter-spacing: 0.04em; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+h3 { font-size: 1.4rem; letter-spacing: 0.02em; }
 
 p { margin: 0 0 1em; }
 
@@ -218,7 +219,7 @@ p { margin: 0 0 1em; }
   border-color: var(--gold);
 }
 .nav-links .btn { padding: 10px 22px; }
-.nav-links .btn--solid { background: #3c1e39; }
+.nav-links .btn--solid { background: #423220; }
 .nav-links .btn--solid:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
 
 .nav-toggle {
@@ -271,7 +272,7 @@ p { margin: 0 0 1em; }
   justify-content: center;
   text-align: center;
   background-image:
-    linear-gradient(180deg, rgba(43, 19, 41, 0.5) 0%, rgba(32, 13, 31, 0.6) 55%, rgba(18, 7, 18, 0.72) 100%),
+    linear-gradient(180deg, rgba(52, 40, 26, 0.5) 0%, rgba(38, 29, 18, 0.6) 55%, rgba(20, 15, 9, 0.72) 100%),
     url('../images/venue-hero-mobile.webp');
   background-size: cover;
   background-position: center;
@@ -285,7 +286,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 800px) {
   .hero {
     background-image:
-      linear-gradient(180deg, rgba(43, 19, 41, 0.5) 0%, rgba(32, 13, 31, 0.6) 55%, rgba(18, 7, 18, 0.72) 100%),
+      linear-gradient(180deg, rgba(52, 40, 26, 0.5) 0%, rgba(38, 29, 18, 0.6) 55%, rgba(20, 15, 9, 0.72) 100%),
       url('../images/venue-hero-desktop.webp');
     background-position: 80% center;
   }
@@ -348,22 +349,6 @@ p { margin: 0 0 1em; }
   margin-top: 6px;
 }
 
-.hero-countdown {
-  margin-top: 34px;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--sand);
-  opacity: 0.85;
-}
-.hero-countdown strong {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--gold-soft);
-  display: block;
-  font-style: normal;
-}
-
 .hero-actions {
   margin-top: 40px;
   display: flex;
@@ -404,7 +389,7 @@ p { margin: 0 0 1em; }
 .glance-card:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
-  box-shadow: 0 18px 40px rgba(43, 19, 41, 0.14);
+  box-shadow: 0 18px 40px rgba(52, 40, 26, 0.14);
 }
 .glance-card::before {
   font-family: var(--font-imperial);
@@ -512,6 +497,15 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- Timeline info toggle ---------- */
+.info-image {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--gold-line);
+  margin-top: 12px;
+}
 .info-toggle { margin-top: 10px; }
 .info-toggle-btn {
   display: inline-flex;
@@ -606,30 +600,21 @@ ul.styled-list {
   margin: 0;
 }
 ul.styled-list li {
-  padding-left: 26px;
-  position: relative;
-  margin-bottom: 12px;
+  padding: 14px 0;
   color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
 }
-ul.styled-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--gold);
-  transform: rotate(45deg);
-}
+ul.styled-list li:first-child { padding-top: 0; }
+ul.styled-list li:last-child { padding-bottom: 0; border-bottom: none; }
 
 .placeholder-note {
   display: inline-block;
   margin-top: 10px;
   font-size: 0.82rem;
   color: var(--terracotta);
-  background: rgba(124, 59, 83, 0.08);
+  background: rgba(184, 134, 47, 0.08);
   padding: 6px 12px;
-  border: 1px dashed rgba(124, 59, 83, 0.4);
+  border: 1px dashed rgba(184, 134, 47, 0.4);
 }
 
 /* ---------- FAQ accordion ---------- */
@@ -686,7 +671,7 @@ ul.styled-list li::before {
   background: var(--white);
   padding: 40px;
   border: 1px solid var(--gold-line);
-  box-shadow: 0 24px 60px rgba(10, 4, 10, 0.35);
+  box-shadow: 0 24px 60px rgba(20, 15, 9, 0.35);
 }
 @media (max-width: 600px) {
   .rsvp-wrap { padding: 28px 22px; }
