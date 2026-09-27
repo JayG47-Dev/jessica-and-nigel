@@ -35,16 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     sections.forEach(function (section) { observer.observe(section); });
   }
 
-  /* ---------- Countdown to the wedding day ---------- */
-  var countdownEl = document.getElementById('countdown-days');
-  if (countdownEl) {
-    var weddingDate = new Date('2027-05-13T00:00:00');
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    var diff = Math.ceil((weddingDate - today) / (1000 * 60 * 60 * 24));
-    countdownEl.textContent = diff > 0 ? diff + ' day' + (diff === 1 ? '' : 's') + ' to go' : 'It’s the big day!';
-  }
-
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var question = item.querySelector('.faq-question');
