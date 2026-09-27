@@ -600,21 +600,12 @@ ul.styled-list {
   margin: 0;
 }
 ul.styled-list li {
-  padding-left: 26px;
-  position: relative;
-  margin-bottom: 12px;
+  padding: 14px 0;
   color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
 }
-ul.styled-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--gold);
-  transform: rotate(45deg);
-}
+ul.styled-list li:first-child { padding-top: 0; }
+ul.styled-list li:last-child { padding-bottom: 0; border-bottom: none; }
 
 .placeholder-note {
   display: inline-block;
