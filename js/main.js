@@ -57,6 +57,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Sliding photo galleries ---------- */
+  document.querySelectorAll('.gallery').forEach(function (gallery) {
+    var track = gallery.querySelector('.gallery-track');
+    var prev = gallery.querySelector('.gallery-nav.prev');
+    var next = gallery.querySelector('.gallery-nav.next');
+    if (!track) { return; }
+    var scrollByAmount = function (direction) {
+      track.scrollBy({ left: direction * track.clientWidth * 0.8, behavior: 'smooth' });
+    };
+    if (prev) { prev.addEventListener('click', function () { scrollByAmount(-1); }); }
+    if (next) { next.addEventListener('click', function () { scrollByAmount(1); }); }
+  });
+
   /* ---------- Timeline info toggles ---------- */
   document.querySelectorAll('.info-toggle').forEach(function (item) {
     var button = item.querySelector('.info-toggle-btn');
