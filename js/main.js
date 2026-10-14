@@ -1,6 +1,41 @@
 // Jessica & Nigel — Malta Wedding site scripts
 
 document.addEventListener('DOMContentLoaded', function () {
+  /* ---------- Countdown to the wedding ---------- */
+  var countdownEl = document.getElementById('countdown');
+  if (countdownEl) {
+    var weddingDate = new Date(countdownEl.getAttribute('data-wedding-date'));
+    var daysEl = document.getElementById('cd-days');
+    var hoursEl = document.getElementById('cd-hours');
+    var minsEl = document.getElementById('cd-mins');
+    var secsEl = document.getElementById('cd-secs');
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+
+    var updateCountdown = function () {
+      var diff = weddingDate.getTime() - Date.now();
+      if (diff <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minsEl.textContent = '00';
+        secsEl.textContent = '00';
+        clearInterval(countdownTimer);
+        return;
+      }
+      var totalSeconds = Math.floor(diff / 1000);
+      var days = Math.floor(totalSeconds / 86400);
+      var hours = Math.floor((totalSeconds % 86400) / 3600);
+      var mins = Math.floor((totalSeconds % 3600) / 60);
+      var secs = totalSeconds % 60;
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minsEl.textContent = pad(mins);
+      secsEl.textContent = pad(secs);
+    };
+
+    updateCountdown();
+    var countdownTimer = setInterval(updateCountdown, 1000);
+  }
+
   /* ---------- Mobile nav toggle ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
