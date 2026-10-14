@@ -270,7 +270,7 @@ p { margin: 0 0 1em; }
   text-align: center;
   background-image:
     linear-gradient(180deg, rgba(10, 9, 6, 0.28) 0%, rgba(10, 9, 6, 0.32) 55%, rgba(10, 9, 6, 0.48) 100%),
-    url('../images/hero-new.png');
+    url('../images/hero-new.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
