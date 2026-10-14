@@ -458,6 +458,7 @@ p { margin: 0 0 1em; }
   height: auto;
   border: 1px solid var(--gold-line);
   margin-top: 12px;
+  margin-bottom: 24px;
 }
 
 /* ---------- Multi-photo galleries (full photos, no cropping) ---------- */
