@@ -2,7 +2,7 @@
    Jessica & Nigel — Malta Wedding
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Roboto+Serif:wght@300;400;500;600&family=MonteCarlo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Roboto+Serif:wght@300;400;500;600&family=MonteCarlo&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
   --ink: #161616;
@@ -21,7 +21,8 @@
   --font-display: "Cormorant Garamond", serif;
   --font-imperial: "Cinzel", serif;
   --font-body: "Roboto Serif", serif;
-  --font-heading: "MonteCarlo", cursive;
+  --font-heading: "Playfair Display", serif;
+  --font-script: "MonteCarlo", cursive;
 
   --max-width: 1120px;
   --radius: 1px;
@@ -50,23 +51,29 @@ a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4 {
   color: var(--sea-deep);
   margin: 0 0 0.5em;
+  line-height: 1.2;
 }
 
+/* Script font is reserved for the one signature moment (the couple's
+   names in the hero) — everywhere else uses the serif display face,
+   which stays legible at headline length and holds its own next to
+   the body text sitting under it. */
 h1 {
-  font-family: var(--font-heading);
+  font-family: var(--font-script);
   font-size: clamp(3.2rem, 7vw, 5.4rem);
   font-weight: 400;
   letter-spacing: 0.015em;
+  line-height: 1.05;
 }
 
 h2, h3, h4 {
   font-family: var(--font-heading);
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.005em;
 }
 
-h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
-h3 { font-size: 1.4rem; letter-spacing: 0.02em; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.3; }
+h3 { font-size: 1.5rem; line-height: 1.25; }
 
 p { margin: 0 0 1em; }
 
@@ -595,6 +602,7 @@ p { margin: 0 0 1em; }
 }
 .info-panel-inner h4 {
   font-family: var(--font-imperial);
+  font-weight: 600;
   font-size: 0.86rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -648,6 +656,7 @@ p { margin: 0 0 1em; }
 }
 .two-col-photo-text h4 {
   font-family: var(--font-body);
+  font-weight: 500;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -681,6 +690,7 @@ p { margin: 0 0 1em; }
 }
 .detail-item h4 {
   font-family: var(--font-body);
+  font-weight: 500;
   font-size: 0.74rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
