@@ -398,8 +398,35 @@ p { margin: 0 0 1em; }
   text-align: center;
   padding: 130px 24px 70px;
 }
-.page-hero h1 { color: var(--white); }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1,
+.section-h1 {
+  /* Page titles use the serif, not the script reserved for the
+     couple's names — a long title in script is hard to read. */
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  line-height: 1.2;
+}
+.page-hero h1 {
+  color: var(--white);
+}
 .page-hero p { color: var(--sand-alt); max-width: 560px; margin: 0 auto; }
+
+/* ---------- Full-length photo galleries (no cropping) ---------- */
+.gallery-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.gallery-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--gold-line);
+}
+.gallery-full.cols-1 { grid-template-columns: 1fr; max-width: 640px; }
 
 /* ---------- At a Glance cards ---------- */
 .glance-grid {

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP — Jessica and Nigel</title>
+  <meta name="description" content="RSVP for Jessica and Nigel's wedding in Naxxar, Malta.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">J <span class="amp">&amp;</span> N</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="accommodation.html">Arrivals and Accommodation</a></li>
+        <li><a href="attire.html">Attire</a></li>
+        <li><a href="the-day.html">The Day</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="rsvp.html" class="btn btn--solid">RSVP</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section section--sea">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Join Us</span>
+        <h1 class="section-h1" style="color:var(--white);">RSVP</h1>
+        <p style="color:#f6efe0;">We understand that travelling to Malta for our wedding may not be possible for everyone, and we completely understand if you cannot make it. Please know that your friendship, support, and well wishes mean the world to us. If you are able to join us, we kindly ask that you RSVP by <strong>31st January 2027</strong> to help us finalise the arrangements for what promises to be a very special day.</p>
+        <div class="divider"><svg viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 12h12M26 12h12"/><path d="M20 12c-2-4-6-5-9-3 2 3 6 4 9 3z"/><path d="M20 12c2-4 6-5 9-3-2 3-6 4-9 3z"/><circle cx="20" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+      </div>
+
+      <div class="rsvp-wrap">
+
+        <form
+          id="rsvp-form"
+          name="rsvp"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="rsvp" />
+          <p class="hidden-field">
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <label class="field-label" for="name">Your Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-row">
+            <label class="field-label">Who Do You Want to RSVP For? <span class="req">*</span></label>
+            <div class="pill-group">
+              <input type="radio" id="rsvp_just_me" name="rsvp_for" value="Just Myself" checked>
+              <label for="rsvp_just_me">Just Myself</label>
+
+              <input type="radio" id="rsvp_plus" name="rsvp_for" value="Myself and Partner / Guest">
+              <label for="rsvp_plus">Myself and Partner / Guest</label>
+            </div>
+
+            <div class="conditional-field" id="guest-name-field">
+              <label class="field-label" for="guest_name">Guest 1 Full Name <span class="req">*</span></label>
+              <input type="text" id="guest_name" name="guest_name">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="field-label">Will You Be Joining Us in Malta? <span class="req">*</span></label>
+            <div class="pill-group">
+              <input type="radio" id="attending_yes" name="attending" value="Yes" checked>
+              <label for="attending_yes">Yes</label>
+
+              <input type="radio" id="attending_no" name="attending" value="No">
+              <label for="attending_no">No</label>
+            </div>
+          </div>
+
+          <div id="attending-extras">
+            <div class="form-row">
+              <label class="field-label" for="dietary">Dietary Requirements or Severe Allergies?</label>
+              <input type="text" id="dietary" name="dietary">
+            </div>
+
+            <div class="form-row">
+              <label class="field-label" for="note">Note for Jessica and Nigel?</label>
+              <input type="text" id="note" name="note">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.6 2 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18 5 19.5 8.6 18 11.9 15.5 16.4 12 21 12 21z"/></svg>Send RSVP</button>
+        </form>
+
+        <div id="rsvp-success">
+          <h3>Thank You!</h3>
+          <p>Your RSVP has been received.</p>
+        </div>
+
+        <div id="rsvp-error">
+          <p>Something went wrong sending your RSVP. Please try again, or email us directly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="logo">J <span class="amp">&amp;</span> N</div>
+    <p>Jessica and Nigel &middot; 13th May 2027 &middot; Naxxar, Malta</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accommodation.html">Arrivals and Accommodation</a></li>
+      <li><a href="attire.html">Attire</a></li>
+      <li><a href="the-day.html">The Day</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+    <p>&copy; <span id="year"></span> Made with love for our wedding weekend.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
