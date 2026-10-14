@@ -439,7 +439,12 @@ p { margin: 0 0 1em; }
   margin-bottom: 6px;
   display: block;
 }
-.timeline-venue { color: var(--ink-soft); font-size: 0.96rem; }
+.timeline-venue {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
 .map-link {
   display: inline-block;
   margin-top: 4px;
