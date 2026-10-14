@@ -349,6 +349,40 @@ p { margin: 0 0 1em; }
   margin-top: 6px;
 }
 
+.countdown {
+  margin-top: 34px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(203, 168, 107, 0.4);
+}
+.countdown-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  color: var(--white);
+  line-height: 1;
+}
+.countdown-label {
+  margin-top: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+@media (max-width: 420px) {
+  .countdown { gap: 18px; }
+  .countdown-item { min-width: 46px; }
+}
+
 .hero-actions {
   margin-top: 40px;
   display: flex;
