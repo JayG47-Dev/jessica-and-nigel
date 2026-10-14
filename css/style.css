@@ -158,12 +158,12 @@ p { margin: 0 0 1em; }
 .btn:hover { background: var(--gold); color: var(--sea-deep); border-color: var(--gold); }
 
 .btn--solid {
-  background: var(--sea-deep);
+  background: #ecd9ab;
   border-color: var(--gold-soft);
   outline-color: rgba(203, 168, 107, 0.55);
-  color: var(--sand);
+  color: var(--ink);
 }
-.btn--solid:hover { background: var(--gold); border-color: var(--gold); outline-color: var(--sea-deep); color: var(--sea-deep); }
+.btn--solid:hover { background: var(--gold-soft); border-color: var(--gold); outline-color: var(--sea-deep); color: var(--ink); }
 
 .btn--light {
   border-color: var(--gold-soft);
