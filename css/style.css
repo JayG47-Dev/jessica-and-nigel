@@ -9,8 +9,8 @@
   --ink-soft: #4d4d49;
   --sea: #8f721f;
   --sea-deep: #161616;
-  --sand: #fbf3dd;
-  --sand-alt: #f4e8c7;
+  --sand: #fbfaf6;
+  --sand-alt: #f2efe6;
   --gold: #a3822e;
   --gold-soft: #cbab6b;
   --terracotta: #a3822e;
@@ -170,7 +170,7 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(246, 239, 224, 0.94);
+  background: rgba(251, 250, 246, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--gold-line);
   box-shadow: 0 3px 0 -2px var(--line);
@@ -439,7 +439,12 @@ p { margin: 0 0 1em; }
   margin-bottom: 6px;
   display: block;
 }
-.timeline-venue { color: var(--ink-soft); font-size: 0.96rem; }
+.timeline-venue {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
 .map-link {
   display: inline-block;
   margin-top: 4px;
