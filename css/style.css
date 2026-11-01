@@ -99,7 +99,7 @@ p { margin: 0 0 1em; }
   padding: 68px 0;
 }
 
-#escape { padding-top: 0; }
+#escape { padding-top: 24px; }
 #details { padding-bottom: 52px; }
 
 .section--alt {
