@@ -99,7 +99,7 @@ p { margin: 0 0 1em; }
   padding: 68px 0;
 }
 
-#escape { padding-top: 24px; }
+#escape { padding-top: 0; }
 #details { padding-bottom: 52px; }
 
 .section--alt {
@@ -724,6 +724,8 @@ p { margin: 0 0 1em; }
     border-left: none;
     border-right: none;
   }
+
+  #escape .two-col-photo-text { margin-top: 16px; }
 }
 
 .escape-items {
