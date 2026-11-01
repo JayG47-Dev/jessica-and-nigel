@@ -15,13 +15,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---------- Nav highlighting for the current page ---------- */
-  var navLinks = document.querySelectorAll('.nav-links a[href]');
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  navLinks.forEach(function (a) {
-    var linkPage = a.getAttribute('href').split('/').pop();
-    if (linkPage === currentPage) { a.classList.add('active'); }
-  });
+  /* ---------- Scroll-spy nav highlighting (one-page site) ---------- */
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  var sections = Array.prototype.map.call(navLinks, function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  }).filter(Boolean);
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    var setActive = function (id) {
+      navLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    };
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { setActive(entry.target.id); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
