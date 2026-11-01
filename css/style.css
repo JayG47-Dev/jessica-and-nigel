@@ -682,36 +682,38 @@ p { margin: 0 0 1em; }
   .two-col-photo.photo-right .two-col-photo-img { order: 0; }
 }
 
-.escape-content {
-  max-width: 640px;
-  margin: 0 auto;
-}
-.escape-content h4 {
-  font-size: 1.05rem;
+.escape-items {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 28px;
+}
+.escape-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
 }
 .escape-icon {
-  width: 17px;
-  height: 17px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   color: var(--gold-soft);
+  margin-top: 2px;
 }
-.escape-content p {
+.escape-item h4 {
+  font-size: 1.05rem;
+  margin: 0 0 0.3em;
+}
+.escape-item p {
   position: relative;
   padding-left: 18px;
+  margin: 0;
 }
-.escape-content p::before {
+.escape-item p::before {
   content: "\2022";
   position: absolute;
   left: 0;
   color: var(--gold);
-}
-.escape-content .info-image {
-  margin-top: 28px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ---------- The Details fact row ---------- */
