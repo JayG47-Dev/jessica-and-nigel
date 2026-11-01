@@ -937,12 +937,3 @@ ul.styled-list li:last-child { padding-bottom: 0; border-bottom: none; }
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mt-lg { margin-top: 48px; }
-
-.escape-tagline {
-  margin: 24px 0 0;
-  text-align: center;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--gold);
-}
