@@ -680,6 +680,12 @@ p { margin: 0 0 1em; }
 @media (max-width: 760px) {
   .two-col-photo, .two-col-photo.photo-right { grid-template-columns: 1fr; gap: 24px; }
   .two-col-photo.photo-right .two-col-photo-img { order: 0; }
+  #escape .two-col-photo-img {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  #escape .two-col-photo-img img { border-left: none; border-right: none; }
 }
 
 .escape-items {
