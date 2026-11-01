@@ -57,17 +57,54 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---------- Sliding photo galleries ---------- */
-  document.querySelectorAll('.gallery').forEach(function (gallery) {
-    var track = gallery.querySelector('.gallery-track');
-    var prev = gallery.querySelector('.gallery-nav.prev');
-    var next = gallery.querySelector('.gallery-nav.next');
-    if (!track) { return; }
-    var scrollByAmount = function (direction) {
-      track.scrollBy({ left: direction * track.clientWidth * 0.8, behavior: 'smooth' });
+  /* ---------- Tap-through photo galleries (mobile) ---------- */
+  document.querySelectorAll('.gallery-full').forEach(function (gallery) {
+    var imgs = gallery.querySelectorAll('img');
+    if (imgs.length < 2) { return; }
+    gallery.classList.add('is-carousel');
+
+    var prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'gallery-nav prev';
+    prev.setAttribute('aria-label', 'Previous photo');
+    prev.innerHTML = '&#8249;';
+
+    var next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'gallery-nav next';
+    next.setAttribute('aria-label', 'Next photo');
+    next.innerHTML = '&#8250;';
+
+    var dots = document.createElement('div');
+    dots.className = 'gallery-dots';
+    imgs.forEach(function (img, i) {
+      var dot = document.createElement('span');
+      dot.className = 'gallery-dot' + (i === 0 ? ' is-active' : '');
+      dot.addEventListener('click', function () {
+        gallery.scrollTo({ left: img.offsetLeft, behavior: 'smooth' });
+      });
+      dots.appendChild(dot);
+    });
+
+    gallery.appendChild(prev);
+    gallery.appendChild(next);
+    gallery.appendChild(dots);
+
+    prev.addEventListener('click', function () {
+      gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' });
+    });
+    next.addEventListener('click', function () {
+      gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
+    });
+
+    var dotEls = dots.querySelectorAll('.gallery-dot');
+    var updateActiveDot = function () {
+      var idx = Math.round(gallery.scrollLeft / gallery.clientWidth);
+      dotEls.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
     };
-    if (prev) { prev.addEventListener('click', function () { scrollByAmount(-1); }); }
-    if (next) { next.addEventListener('click', function () { scrollByAmount(1); }); }
+    gallery.addEventListener('scroll', function () {
+      window.requestAnimationFrame(updateActiveDot);
+    }, { passive: true });
   });
 
   /* ---------- Timeline info toggles ---------- */
