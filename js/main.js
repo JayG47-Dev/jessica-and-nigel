@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateGuestField() {
       var selected = rsvpForm.querySelector('input[name="rsvp_for"]:checked');
-      if (selected && selected.value === 'Myself & Partner / Guest') {
+      if (selected && selected.value === 'Myself and partner / guest') {
         guestField.classList.add('is-visible');
         guestInput.setAttribute('required', 'required');
       } else {
