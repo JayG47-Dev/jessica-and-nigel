@@ -99,7 +99,8 @@ p { margin: 0 0 1em; }
   padding: 68px 0;
 }
 
-#escape { padding-top: 20px; }
+#escape { padding-top: 0; }
+#details { padding-bottom: 32px; }
 
 .section--alt {
   background:
