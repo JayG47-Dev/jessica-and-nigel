@@ -653,7 +653,7 @@ p { margin: 0 0 1em; }
 .escape-items {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 40px;
   margin-top: 38px;
 }
 .escape-item {
