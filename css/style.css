@@ -704,17 +704,7 @@ p { margin: 0 0 1em; }
   font-size: 1.05rem;
   margin: 0 0 0.3em;
 }
-.escape-item p {
-  position: relative;
-  padding-left: 18px;
-  margin: 0;
-}
-.escape-item p::before {
-  content: "\2022";
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-}
+.escape-item p { margin: 0; }
 
 /* ---------- The Details fact row ---------- */
 .details-row {
