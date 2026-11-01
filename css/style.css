@@ -686,6 +686,17 @@ p { margin: 0 0 1em; }
   max-width: 640px;
   margin: 0 auto;
 }
+.escape-content h4 { font-size: 1.05rem; }
+.escape-content p {
+  position: relative;
+  padding-left: 18px;
+}
+.escape-content p::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
 .escape-content .info-image {
   margin-top: 28px;
   margin-left: auto;
