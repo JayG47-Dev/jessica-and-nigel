@@ -686,7 +686,18 @@ p { margin: 0 0 1em; }
   max-width: 640px;
   margin: 0 auto;
 }
-.escape-content h4 { font-size: 1.05rem; }
+.escape-content h4 {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.escape-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold-soft);
+}
 .escape-content p {
   position: relative;
   padding-left: 18px;
