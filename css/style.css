@@ -722,6 +722,8 @@ p { margin: 0 0 1em; }
   margin: 0 auto 14px;
 }
 .detail-item p { color: var(--ink); font-size: 0.92rem; margin: 0; }
+.detail-divider { border: none; border-top: 1px solid var(--line); width: 60px; margin: 14px auto; }
+.detail-sub { font-size: 0.85rem; color: var(--ink-soft); }
 
 @media (max-width: 620px) {
   .details-row { grid-template-columns: 1fr; row-gap: 0; max-width: 420px; }
