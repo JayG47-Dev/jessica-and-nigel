@@ -389,6 +389,7 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 .carousel-track { display: contents; }
 .gallery-full.cols-1 { grid-template-columns: 1fr; max-width: 640px; }
 .gallery-full--narrow { max-width: 800px; margin-left: auto; margin-right: auto; }
+.gallery-full--uniform img { aspect-ratio: 4 / 3; object-fit: cover; }
 @media (max-width: 760px) {
   .gallery-full--narrow.is-carousel { max-width: none; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 }
