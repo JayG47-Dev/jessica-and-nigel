@@ -236,6 +236,7 @@ p { margin: 0 0 1em; }
   color: var(--sea-deep);
   border-color: var(--gold);
 }
+.nav-links .btn { padding: 10px 22px; border-bottom-color: var(--gold); }
 
 .nav-toggle {
   display: none;
