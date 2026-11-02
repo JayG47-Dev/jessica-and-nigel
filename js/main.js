@@ -63,6 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (imgs.length < 2) { return; }
     gallery.classList.add('is-carousel');
 
+    /* Images scroll inside their own track so the nav buttons and dots,
+       appended to the outer element, stay fixed in place rather than
+       scrolling out of view with the photos. */
+    var track = document.createElement('div');
+    track.className = 'carousel-track';
+    imgs.forEach(function (img) { track.appendChild(img); });
+    gallery.appendChild(track);
+
     var prev = document.createElement('button');
     prev.type = 'button';
     prev.className = 'gallery-nav prev';
@@ -81,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var dot = document.createElement('span');
       dot.className = 'gallery-dot' + (i === 0 ? ' is-active' : '');
       dot.addEventListener('click', function () {
-        gallery.scrollTo({ left: img.offsetLeft, behavior: 'smooth' });
+        track.scrollTo({ left: img.offsetLeft, behavior: 'smooth' });
       });
       dots.appendChild(dot);
     });
@@ -91,18 +99,18 @@ document.addEventListener('DOMContentLoaded', function () {
     gallery.appendChild(dots);
 
     prev.addEventListener('click', function () {
-      gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' });
+      track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
     });
     next.addEventListener('click', function () {
-      gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
+      track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
     });
 
     var dotEls = dots.querySelectorAll('.gallery-dot');
     var updateActiveDot = function () {
-      var idx = Math.round(gallery.scrollLeft / gallery.clientWidth);
+      var idx = Math.round(track.scrollLeft / track.clientWidth);
       dotEls.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
     };
-    gallery.addEventListener('scroll', function () {
+    track.addEventListener('scroll', function () {
       window.requestAnimationFrame(updateActiveDot);
     }, { passive: true });
   });
