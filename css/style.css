@@ -427,24 +427,12 @@ p { margin: 0 0 1em; }
   border-top: none;
 }
 
-.timeline-heading-row {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 0.15em;
-}
 .timeline-item h3 {
   color: var(--sea-deep);
-  margin: 0;
+  margin-bottom: 0.15em;
 }
 .timeline-time-inline {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-  white-space: nowrap;
+  margin-right: 0.45em;
 }
 .timeline-venue {
   font-family: var(--font-display);
