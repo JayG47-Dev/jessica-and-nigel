@@ -429,10 +429,20 @@ p { margin: 0 0 1em; }
 
 .timeline-item h3 {
   color: var(--sea-deep);
-  margin-bottom: 0.15em;
+  margin: 0;
 }
-.timeline-time-inline {
-  margin-right: 0.45em;
+.timeline-time-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-line);
+  border-radius: 30px;
+  padding: 5px 16px;
+  margin-bottom: 12px;
 }
 .timeline-venue {
   font-family: var(--font-display);
