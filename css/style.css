@@ -2,7 +2,7 @@
    Jessica & Nigel — Malta Wedding
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Roboto+Serif:wght@300;400;500;600&family=MonteCarlo&family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=MonteCarlo&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
   --ink: #161616;
@@ -19,7 +19,7 @@
   --white: #fffdf8;
 
   --font-display: "Cormorant Garamond", serif;
-  --font-body: "Roboto Serif", serif;
+  --font-body: "Playfair Display", serif;
   --font-heading: "Playfair Display", serif;
   --font-script: "MonteCarlo", cursive;
 
@@ -36,7 +36,7 @@ section[id] { scroll-margin-top: 74px; }
 body {
   margin: 0;
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink);
   background: var(--sand);
   line-height: 1.65;
@@ -80,9 +80,8 @@ h3 { font-size: 14pt; line-height: 1.25; color: var(--gold); }
 h4 {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
   color: var(--gold);
 }
 
@@ -98,9 +97,9 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.76rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
   color: var(--gold);
   margin-bottom: 0.9em;
 }
@@ -156,9 +155,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   align-items: center;
   gap: 8px;
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   padding: 16px 32px;
   border: 1px solid var(--gold);
   outline: 1px solid var(--gold);
@@ -225,9 +223,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   padding: 0;
 }
 .nav-links a {
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   color: var(--ink-soft);
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
@@ -338,8 +335,7 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 .hero-date {
   font-family: var(--font-body);
   font-size: 1.05rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--ink);
   margin-top: 18px;
 }
@@ -456,9 +452,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 .map-link {
   display: inline-block;
   margin-top: 4px;
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
   color: var(--sea);
   border-bottom: 1px solid var(--gold);
 }
@@ -596,9 +591,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   border: none;
   padding: 0;
   font-family: var(--font-body);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
   color: var(--sea);
   cursor: pointer;
 }
@@ -781,31 +775,6 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   .detail-item:last-child { padding-bottom: 0; border-bottom: none; }
 }
 
-/* ---------- Our Story ---------- */
-.story-label {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--terracotta);
-  background: rgba(163, 130, 46, 0.1);
-  padding: 6px 14px;
-  border: 1px dashed var(--gold-line);
-  margin-bottom: 1em;
-}
-
-
-.placeholder-note {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.82rem;
-  color: var(--terracotta);
-  background: rgba(184, 134, 47, 0.08);
-  padding: 6px 12px;
-  border: 1px dashed rgba(184, 134, 47, 0.4);
-}
-
 /* ---------- FAQ accordion ---------- */
 .faq-list { max-width: 760px; margin: 0 auto; }
 .faq-item {
@@ -871,9 +840,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 
 .form-row label.field-label {
   display: block;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   color: var(--sea);
   margin-bottom: 8px;
 }
@@ -907,9 +875,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   gap: 10px;
   border: 1px solid var(--line);
   padding: 12px 22px;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--ink-soft);
@@ -977,9 +944,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   padding: 0;
 }
 .footer-links a {
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
   color: var(--sand-alt);
   opacity: 0.85;
 }
