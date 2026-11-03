@@ -654,7 +654,7 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 }
 @media (max-width: 760px) {
   .two-col-photo, .two-col-photo.photo-right { grid-template-columns: 1fr; gap: 24px; }
-  .two-col-photo.photo-right .two-col-photo-img { order: 0; }
+  .two-col-photo.photo-right .two-col-photo-img { order: 1; }
   .two-col-photo-img {
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -672,8 +672,6 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   }
 
   #escape .two-col-photo-text { margin-top: 16px; }
-
-  #everything { padding-top: 0; }
 }
 
 .escape-items {
