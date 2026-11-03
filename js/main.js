@@ -57,6 +57,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Things-to-do accordion ---------- */
+  document.querySelectorAll('.accordion-list').forEach(function (list) {
+    list.querySelectorAll('.accordion-item').forEach(function (item) {
+      var question = item.querySelector('.accordion-question');
+      var answer = item.querySelector('.accordion-answer');
+      question.addEventListener('click', function () {
+        var isOpen = item.classList.contains('is-open');
+        list.querySelectorAll('.accordion-item.is-open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('is-open');
+            openItem.querySelector('.accordion-answer').style.maxHeight = null;
+          }
+        });
+        if (isOpen) {
+          item.classList.remove('is-open');
+          answer.style.maxHeight = null;
+        } else {
+          item.classList.add('is-open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+
   /* ---------- Tap-through photo galleries (mobile) ---------- */
   document.querySelectorAll('.gallery-full').forEach(function (gallery) {
     var imgs = gallery.querySelectorAll('img');
