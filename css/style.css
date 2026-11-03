@@ -287,7 +287,10 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 }
 .hero-pic {
   position: absolute;
-  inset: -1px;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
   display: block;
 }
 .hero-pic img {
