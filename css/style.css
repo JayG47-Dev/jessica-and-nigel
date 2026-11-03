@@ -743,7 +743,7 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
 .accordion-answer-inner h4:first-child { margin-top: 0; }
 .accordion-answer-inner ul { margin: 0 0 1em; padding-left: 1.2em; }
 .accordion-answer-inner ul:last-child { margin-bottom: 0; }
-.accordion-answer-inner li { margin-bottom: 0.3em; }
+.accordion-answer-inner li { font-size: 0.82rem; margin-bottom: 0.3em; }
 
 /* ---------- The Details fact row ---------- */
 .details-row {
