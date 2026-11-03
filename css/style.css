@@ -672,6 +672,8 @@ p { margin: 0 0 1em; font-size: 12pt; color: var(--ink); }
   }
 
   #escape .two-col-photo-text { margin-top: 16px; }
+
+  #everything { padding-bottom: 0; }
 }
 
 .escape-items {
